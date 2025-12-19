@@ -21,11 +21,7 @@ The system operates autonomously at the edge for fast response, with an optional
              style="width:100%; height:200px; object-fit:cover;"/>
       </a>
       <br/>
-      <b>DeepSeek AI Chatbot</b><br/>
-      <sub>Built an LLM-powered chatbot that answers domain-specific questions in real time.</sub><br/>
-      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/AI%20Projects/Deepseek.md">Repo</a>
-      <br/>
-      <sub>Tags: AI, LLMs, Prompt Engineering</sub>
+      <b>Dash Board</b><br/>
     </td>
     <td align="center" width="25%">
       <a href="https://github.com/maximus-soares/Projects/blob/main/CICD%20Pipeline/Set%20Up%20a%20Web%20App%20in%20the%20Cloud.md">
@@ -34,11 +30,7 @@ The system operates autonomously at the edge for fast response, with an optional
              style="width:100%; height:200px; object-fit:cover;"/>
       </a>
       <br/>
-      <b>Cloud CI/CD Pipeline</b><br/>
-      <sub>Automated deployment of a web app using GitHub Actions and AWS ECS.</sub><br/>
-      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/CICD%20Pipeline/Set%20Up%20a%20Web%20App%20in%20the%20Cloud.md">Repo</a>
-      <br/>
-      <sub>Tags: DevOps, Docker, GitHub Actions</sub>
+      <b>Pod Details</b><br/>
     </td>
     <td align="center" width="25%">
       <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">
@@ -47,11 +39,7 @@ The system operates autonomously at the edge for fast response, with an optional
              style="width:100%; height:200px; object-fit:cover;"/>
       </a>
       <br/>
-      <b>Secure AWS VPC</b><br/>
-      <sub>Designed and deployed a custom VPC with public/private subnets and routing.</sub><br/>
-      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">Repo</a>
-      <br/>
-      <sub>Tags: Networking, AWS, Security</sub>
+      <b>AI Analytics</b><br/>
     </td>
         <td align="center" width="25%">
       <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">
@@ -60,11 +48,7 @@ The system operates autonomously at the edge for fast response, with an optional
              style="width:100%; height:200px; object-fit:cover;"/>
       </a>
       <br/>
-      <b>Secure AWS VPC</b><br/>
-      <sub>Designed and deployed a custom VPC with public/private subnets and routing.</sub><br/>
-      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">Repo</a>
-      <br/>
-      <sub>Tags: Networking, AWS, Security</sub>
+      <b>System Characteristics</b><br/>
     </td>
   </tr>
 </table>
