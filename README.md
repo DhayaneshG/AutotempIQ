@@ -24,7 +24,7 @@ The system operates autonomously at the edge for fast response, with an optional
       <b>Dash Board</b><br/>
     </td>
     <td align="center" width="25%">
-      <a href="https://github.com/maximus-soares/Projects/blob/main/CICD%20Pipeline/Set%20Up%20a%20Web%20App%20in%20the%20Cloud.md">
+      <a href="https://dhayaneshg.github.io/AutotempIQ/">
         <img src="https://github.com/user-attachments/assets/ae820c00-b7be-49f4-ba4a-2b6a3f47df13"
              alt="CI/CD Pipeline Project"
              style="width:100%; height:200px; object-fit:cover;"/>
@@ -33,7 +33,7 @@ The system operates autonomously at the edge for fast response, with an optional
       <b>Pod Details</b><br/>
     </td>
     <td align="center" width="25%">
-      <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">
+      <a href="https://dhayaneshg.github.io/AutotempIQ/">
         <img src="https://github.com/user-attachments/assets/887835bf-3a9c-4c37-ae64-8f3133c4ab78"
              alt="VPC Networking Project"
              style="width:100%; height:200px; object-fit:cover;"/>
@@ -42,7 +42,7 @@ The system operates autonomously at the edge for fast response, with an optional
       <b>AI Analytics</b><br/>
     </td>
         <td align="center" width="25%">
-      <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">
+      <a href="https://dhayaneshg.github.io/AutotempIQ/">
         <img src="https://github.com/user-attachments/assets/24b73a8e-1228-4268-9871-af7815722394"
              alt="VPC Networking Project"
              style="width:100%; height:200px; object-fit:cover;"/>
