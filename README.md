@@ -15,7 +15,7 @@ The system operates autonomously at the edge for fast response, with an optional
 <table>
   <tr>
     <td align="center" width="25%">
-      <a href="https://github.com/maximus-soares/Projects/blob/main/AI%20Projects/Deepseek.md">
+      <a href="https://dhayaneshg.github.io/AutotempIQ/">
         <img src="https://github.com/user-attachments/assets/2c254c44-e53d-4172-b82d-bc920bc8af6b"
              alt="DeepSeek AI Project"
              style="width:100%; height:200px; object-fit:cover;"/>
