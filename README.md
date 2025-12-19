@@ -1,12 +1,12 @@
 # AutotempIQ
-AutoTem IQ is a decentralized, IoT-based HVAC system that uses intelligent, sensor-driven pods to create personalized microclimates by adjusting temperature in real time based on occupancy and environmental conditions, delivering enhanced comfort with significantly reduced energy consumption.
+AutoTempIQ is a decentralized, IoT-based HVAC system that uses intelligent, sensor-driven pods to create personalized microclimates by adjusting temperature in real time based on occupancy and environmental conditions, delivering enhanced comfort with significantly reduced energy consumption.
 
 ## Tech stack
 [![My Skills](https://skillicons.dev/icons?i=arduino,cpp,python,raspberrypi,firebase,html,css,javascript,blender,tensorflow,matlab,spyder6&theme=dark)](https://skillicons.dev)
 
 
 ## Overview
-AutoTemp IQ is a decentralized, IoT-based HVAC system designed to deliver personalized thermal comfort while minimizing energy consumption. Instead of conditioning an entire room or building, AutoTem IQ uses compact, intelligent HVAC pods that focus on creating microclimates around occupied zones such as individual desks or seats. Each pod continuously monitors occupancy, temperature, humidity, and air quality using onboard sensors. Based on this data, an edge controller dynamically drives actuators like Peltier modules, fans, and micro-heaters to provide precise heating or cooling only when and where it is required.
+AutoTempIQ is a decentralized, IoT-based HVAC system designed to deliver personalized thermal comfort while minimizing energy consumption. Instead of conditioning an entire room or building, AutoTem IQ uses compact, intelligent HVAC pods that focus on creating microclimates around occupied zones such as individual desks or seats. Each pod continuously monitors occupancy, temperature, humidity, and air quality using onboard sensors. Based on this data, an edge controller dynamically drives actuators like Peltier modules, fans, and micro-heaters to provide precise heating or cooling only when and where it is required.
 
 The system operates autonomously at the edge for fast response, with an optional cloud layer for monitoring, analytics, and user control through a clean dashboard. By eliminating unnecessary cooling or heating of unoccupied spaces, AutoTem IQ significantly reduces energy wastage while improving user comfort. Its modular, plug-and-play design makes it ideal for modern offices, libraries, healthcare spaces, and retrofit-friendly buildings. Overall, AutoTem IQ represents a shift from centralized HVAC to a smart, user-centric, and energy-efficient climate control approach.
 
