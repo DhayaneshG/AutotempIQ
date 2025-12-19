@@ -12,40 +12,65 @@ The system operates autonomously at the edge for fast response, with an optional
 
 ## System Architecture
 
-
-
-<table width="70%">
+<table>
   <tr>
-    <td align="center" width="20%" style="padding:20px;">
-      <img src="https://github.com/user-attachments/assets/3ede9be8-e7cd-459b-8607-233581168021"
-           width="70%"
-           style="border-radius:12px;" />
+    <td align="center" width="25%">
+      <a href="https://github.com/maximus-soares/Projects/blob/main/AI%20Projects/Deepseek.md">
+        <img src="https://github.com/user-attachments/assets/2c254c44-e53d-4172-b82d-bc920bc8af6b"
+             alt="DeepSeek AI Project"
+             style="width:100%; height:200px; object-fit:cover;"/>
+      </a>
       <br/>
-      <div style="font-size:40px; font-weight:700; margin:6px 0;">
-        System Architecture
-      </div>
-      <div style="font-size:13px; color:#c9d1d9; line-height:1.5; max-width:420px;">
-        Layered working architecture showcasing input, filtration, and output stages,
-        including mesh screening, activated carbon filtration, UV-LED treatment,
-        and sensor-based water quality monitoring.
-      </div>
+      <b>DeepSeek AI Chatbot</b><br/>
+      <sub>Built an LLM-powered chatbot that answers domain-specific questions in real time.</sub><br/>
+      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/AI%20Projects/Deepseek.md">Repo</a>
+      <br/>
+      <sub>Tags: AI, LLMs, Prompt Engineering</sub>
     </td>
-    <td align="center" width="20%" style="padding:20px;">
-      <img src="https://github.com/user-attachments/assets/b0834464-008c-4a6f-af8f-5cb831f33a16"
-           width="70%"
-           style="border-radius:12px;" />
+    <td align="center" width="25%">
+      <a href="https://github.com/maximus-soares/Projects/blob/main/CICD%20Pipeline/Set%20Up%20a%20Web%20App%20in%20the%20Cloud.md">
+        <img src="https://github.com/user-attachments/assets/ae820c00-b7be-49f4-ba4a-2b6a3f47df13"
+             alt="CI/CD Pipeline Project"
+             style="width:100%; height:200px; object-fit:cover;"/>
+      </a>
       <br/>
-      <div style="font-size:40px; font-weight:600; margin:6px 0;">
-        Working Process
-      </div>
-      <div style="font-size:13px; color:#c9d1d9; line-height:1.5; max-width:420px;">
-        Physical implementation of HydroIQ highlighting modular filtration chambers,
-        gravity-based water flow, and solar-powered operation designed for
-        off-grid and low-resource environments.
-      </div>
+      <b>Cloud CI/CD Pipeline</b><br/>
+      <sub>Automated deployment of a web app using GitHub Actions and AWS ECS.</sub><br/>
+      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/CICD%20Pipeline/Set%20Up%20a%20Web%20App%20in%20the%20Cloud.md">Repo</a>
+      <br/>
+      <sub>Tags: DevOps, Docker, GitHub Actions</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">
+        <img src="https://github.com/user-attachments/assets/887835bf-3a9c-4c37-ae64-8f3133c4ab78"
+             alt="VPC Networking Project"
+             style="width:100%; height:200px; object-fit:cover;"/>
+      </a>
+      <br/>
+      <b>Secure AWS VPC</b><br/>
+      <sub>Designed and deployed a custom VPC with public/private subnets and routing.</sub><br/>
+      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">Repo</a>
+      <br/>
+      <sub>Tags: Networking, AWS, Security</sub>
+    </td>
+        <td align="center" width="25%">
+      <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">
+        <img src="https://github.com/user-attachments/assets/24b73a8e-1228-4268-9871-af7815722394"
+             alt="VPC Networking Project"
+             style="width:100%; height:200px; object-fit:cover;"/>
+      </a>
+      <br/>
+      <b>Secure AWS VPC</b><br/>
+      <sub>Designed and deployed a custom VPC with public/private subnets and routing.</sub><br/>
+      🔗 <a href="https://github.com/maximus-soares/Projects/blob/main/Networking/1%20Build%20a%20VPC.md">Repo</a>
+      <br/>
+      <sub>Tags: Networking, AWS, Security</sub>
     </td>
   </tr>
 </table>
+
+
+
 
 ## Impacts
 - Provides safe drinking water access to underserved populations
