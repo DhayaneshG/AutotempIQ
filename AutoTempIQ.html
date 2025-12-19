@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoTem IQ Dashboard</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+</head>
+
+<body class="bg-blue-50 font-sans">
+<div class="flex min-h-screen">
+
+<!-- SIDEBAR -->
+<aside class="w-64 bg-indigo-700 text-white p-6 flex flex-col">
+  <h2 class="text-2xl font-bold mb-6">AutoTem IQ</h2>
+  <nav class="space-y-4">
+    <button onclick="showTab('dashboard')" class="w-full text-left bg-indigo-800 px-3 py-2 rounded">📊 Dashboard</button>
+    <button onclick="showTab('devices')" class="w-full text-left px-3 py-2">💡 Pods</button>
+    <button onclick="showTab('analytics')" class="w-full text-left px-3 py-2">📈 Analytics</button>
+    <button onclick="showTab('ai')" class="w-full text-left px-3 py-2">🧠 AI Insights</button>
+  </nav>
+  <div class="mt-auto">
+    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Demo Mode Enabled</span>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="flex-1 p-6">
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="tab">
+  <h1 class="text-2xl font-bold text-blue-800 mb-4">Performance Dashboard</h1>
+
+  <div class="grid grid-cols-4 gap-4">
+    <div class="bg-white p-4 rounded shadow">
+      <p class="text-sm">🌡️ Temperature</p>
+      <p id="temp" class="text-3xl font-bold">-- °C</p>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <p class="text-sm">🌬️ AQI</p>
+      <p id="aqi" class="text-3xl font-bold">--</p>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <p class="text-sm">👤 Occupancy</p>
+      <p id="occupancy" class="text-3xl font-bold">--</p>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <p class="text-sm">⚡ Energy Saved</p>
+      <p id="energy" class="text-3xl font-bold">-- %</p>
+    </div>
+  </div>
+</section>
+
+<!-- PODS -->
+<section id="devices" class="tab hidden">
+  <h2 class="text-xl font-bold text-blue-800 mb-4">Connected Pods</h2>
+  <div id="device-list" class="space-y-4"></div>
+</section>
+
+<!-- ANALYTICS -->
+<section id="analytics" class="tab hidden">
+  <h2 class="text-xl font-bold text-blue-800 mb-4">System Analytics</h2>
+  <canvas id="analyticsChart"></canvas>
+</section>
+
+<!-- AI -->
+<section id="ai" class="tab hidden">
+  <h2 class="text-xl font-bold text-blue-800 mb-4">AI Comfort Prediction</h2>
+  <canvas id="aiChart"></canvas>
+</section>
+
+</main>
+</div>
+
+<script>
+/* -------------------- FIREBASE -------------------- */
+firebase.initializeApp({
+  apiKey: "AIzaSyDMYQYDP2MDdpxg9F6sT0I6xQPb-BzmuzA",
+  databaseURL: "https://smartzone-hvac-default-rtdb.asia-southeast1.firebasedatabase.app"
+});
+const db = firebase.database();
+
+/* -------------------- TAB HANDLER -------------------- */
+function showTab(id) {
+  document.querySelectorAll(".tab").forEach(tab => tab.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
+
+/* -------------------- MOCK DATA -------------------- */
+let temp = 24, aqi = 80, energy = 30;
+
+const mockPods = {
+  pod1: { name: "AutoTem Pod A", status: "online" },
+  pod2: { name: "AutoTem Pod B", status: "online" },
+  pod3: { name: "AutoTem Pod C", status: "warning" },
+  pod4: { name: "AutoTem Pod D", status: "offline" }
+};
+
+/* -------------------- RENDER PODS -------------------- */
+function renderPods(pods) {
+  const list = document.getElementById("device-list");
+  list.innerHTML = "";
+
+  for (const id in pods) {
+    const pod = pods[id];
+    const color =
+      pod.status === "online" ? "text-green-600" :
+      pod.status === "warning" ? "text-yellow-500" :
+      "text-red-600";
+
+    list.innerHTML += `
+      <div class="bg-white p-4 rounded shadow flex justify-between items-center">
+        <div>
+          <p class="font-semibold">${pod.name}</p>
+          <p class="text-sm text-gray-500">
+            Status: <span class="${color}">${pod.status}</span>
+          </p>
+        </div>
+        <div class="space-x-2">
+          <button class="bg-blue-500 text-white px-3 py-1 rounded">ON</button>
+          <button class="bg-red-500 text-white px-3 py-1 rounded">OFF</button>
+        </div>
+      </div>`;
+  }
+}
+
+/* -------------------- INITIAL POD RENDER -------------------- */
+renderPods(mockPods);
+
+/* -------------------- FIREBASE OVERRIDE -------------------- */
+db.ref("devices").on("value", snap => {
+  if (snap.exists()) renderPods(snap.val());
+});
+
+/* -------------------- LIVE METRICS -------------------- */
+setInterval(() => {
+  temp += (Math.random() - 0.5);
+  aqi += (Math.random() - 0.5) * 2;
+  energy += (Math.random() - 0.5);
+
+  document.getElementById("temp").innerText = temp.toFixed(1) + " °C";
+  document.getElementById("aqi").innerText = Math.round(aqi);
+  document.getElementById("occupancy").innerText =
+    Math.random() > 0.4 ? "Occupied" : "Vacant";
+  document.getElementById("energy").innerText = Math.round(energy) + " %";
+}, 3000);
+
+/* -------------------- ANALYTICS CHART -------------------- */
+const analyticsChart = new Chart(
+  document.getElementById("analyticsChart"),
+  {
+    type: "line",
+    data: {
+      labels: ["10:00","10:05","10:10","10:15","10:20"],
+      datasets: [
+        { label: "Temperature °C", data: [25,24.6,24.3,24.1,24], borderColor: "blue" },
+        { label: "AQI", data: [90,85,82,80,78], borderColor: "green" }
+      ]
+    }
+  }
+);
+
+/* -------------------- AI CHART -------------------- */
+const aiChart = new Chart(
+  document.getElementById("aiChart"),
+  {
+    type: "line",
+    data: {
+      labels: ["Now","+5","+10","+15"],
+      datasets: [
+        { label: "Predicted Comfort Temp", data: [24,23.8,23.6,23.5], borderColor: "purple" }
+      ]
+    }
+  }
+);
+</script>
+
+</body>
+</html>
